@@ -1,6 +1,12 @@
-require("@nomicfoundation/hardhat-toolbox");
-
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
-  solidity: "0.8.28",
-};
+require("@nomiclabs/hardhat-ethers"); 
+require("dotenv").config(); 
+module.exports = { 
+    solidity: "0.8.0", 
+    networks: { 
+        sonicTestnet: { 
+            url: "https://testnet-rpc.soniclabs.com", 
+            chainId: 146, 
+            accounts: [process.env.PRIVATE_KEY] 
+        } 
+    } 
+}; 
