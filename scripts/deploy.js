@@ -1,8 +1,11 @@
 const { ethers } = require("hardhat");
+require("dotenv").config();
+const hre = require("hardhat");
+
 
 async function main() {
   const [deployer] = await ethers.getSigners();
-  console.log("Deploying contracts with the account:", deployer.address);
+  console.log("Deploying contracts with account:", deployer.address);
 
   const SonicNFT = await ethers.getContractFactory("SonicNFT");
   const sonicNFT = await SonicNFT.deploy();
