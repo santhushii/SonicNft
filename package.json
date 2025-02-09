@@ -1,10 +1,13 @@
 {
   "name": "sonicnft",
   "version": "1.0.0",
-  "description": "\"# SonicNFT\"",
+  "description": "SonicNFT Hardhat Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network sonicTestnet",
+    "coverage": "npx hardhat coverage"
   },
   "repository": {
     "type": "git",
@@ -18,13 +21,18 @@
   },
   "homepage": "https://github.com/santhushii/SonicNFT#readme",
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "hardhat": "^2.22.18"
+    "hardhat": "^2.22.18",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "ethers": "5.7.2"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.2.0",
     "dotenv": "^16.4.7",
-    "ethers": "^6.13.5",
-    "hardhat-waffle": "^0.0.1-security"
+    "chai": "^5.1.2",
+    "mocha": "^11.1.0"
+  },
+  "resolutions": {
+    "ethers": "5.7.2"
   }
 }
