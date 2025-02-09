@@ -5,7 +5,7 @@ module.exports = {
     networks: { 
         sonicTestnet: { 
             url: "https://testnet-rpc.soniclabs.com", 
-            chainId: 146, 
+            chainId: , 57054
             accounts: [process.env.PRIVATE_KEY] 
         } 
     } 
